@@ -34,8 +34,8 @@ jobs:
             
             echo "Pinging: $url"
             
-            # Request HTTP GET dengan timeout 10 detik
-            status_code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 "$url")
+            # Request HTTP GET dengan timeout 60 detik
+            status_code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 60 "$url")
             echo "Status: $status_code"
             
             # Jika status code BUKAN 200, kirim notifikasi ke Telegram
